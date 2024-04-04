@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: rvsivadocker/webapp:66
+        image: rvsivadocker/webapp:68
         imagePullSecrets:
           - name: my-registry-secret
         ports:
