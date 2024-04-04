@@ -18,22 +18,3 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
-
-
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata: 
-  name: guestbook
-  namespace: argocd
-spec: 
-  destination: 
-    namespace: guestbook
-    server: "https://kubernetes.default.svc"
-  project: default
-  source: 
-    path: guestbook
-    repoURL: "https://github.com/sivasankardevops/kubernetes.git"
-    targetRevision: master
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
