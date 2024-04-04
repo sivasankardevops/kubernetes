@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: rvsivadocker/webapp:70
+        image: rvsivadocker/webapp:71
         ports:
         - containerPort: 80
       imagePullSecrets:
