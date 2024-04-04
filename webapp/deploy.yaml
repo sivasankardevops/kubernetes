@@ -17,5 +17,7 @@ spec:
       containers:
       - name: nginx
         image: rvsivadocker/webapp:66
+        imagePullSecrets:
+          - name: my-registry-secret
         ports:
         - containerPort: 80
