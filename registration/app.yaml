@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp-deployment
+  name: app-deployment
   labels:
-    app: webapp
+    app: registration
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: webapp
+      app: registration
   template:
     metadata:
       labels:
-        app: webapp
+        app: registration
     spec:
       containers:
       - name: nginx
-        image: rvsivadocker/webapp:74
+        image: rvsivadocker/orange:1.0
         ports:
         - containerPort: 80
       imagePullSecrets:
