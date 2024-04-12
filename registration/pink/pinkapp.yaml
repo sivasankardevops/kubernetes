@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    app: registration-pink
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: registration-pink
+  template:
+    metadata:
+      labels:
+        app: registration-pink
+    spec:
+      containers:
+      - name: nginx
+        image: rvsivadocker/pink:1.0
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+        - name: myregistrykey
